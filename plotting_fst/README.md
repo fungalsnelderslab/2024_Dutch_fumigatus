@@ -1,1 +1,1 @@
-
+These files are used to produce the output of the Fst analysis. The input files are tab delimited files from vcftools, and the `fst_clin_env.windowed.weir.fst` files has the Dutch population split into clinical versus environmental, while the `fst_res_susc.windowed.weir.fst` has the same population, but split into azole sensitive and resistant based on VIPcheck plate phenotype.
