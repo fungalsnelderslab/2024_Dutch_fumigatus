@@ -20,22 +20,22 @@ colors <- c("wt R"="purple1","46"="dodgerblue3","92"="dodgerblue3","34"="dodgerb
 shapes <- c("wt R"=18,"46"=15,"92"=17,"34"=16,"wt"=18)
 
 clinvenv12 <- ggplot(data) + theme_classic(base_size=12) +
-  geom_point(aes(x=PC1,y=PC2,color=Source),size=2) +
+  geom_point(aes(x=PC1,y=PC2,color=Source),size=1.5,alpha=0.6) +
   labs(x="PC1 (22.1%)",y="PC2 (8.8%)")
 
 data$status <- NA
 data$status[data$Haplotype=="wt"] <- "Sensitive"
 data$status[data$Haplotype %in% c("34","46","92","wt R")] <- "Resistant"
 resvsens12 <- ggplot(data) + theme_classic(base_size=12) +
-  geom_point(aes(x=PC1,y=PC2,color=status),size=2) +
+  geom_point(aes(x=PC1,y=PC2,color=status),size=1.5,alpha=0.6) +
   labs(x="PC1 (22.1%)",y="PC2 (8.8%)",color="Azole phentoype")
 
 cyptype12 <- ggplot(data) + theme_classic(base_size=12) +
-  geom_point(aes(x=PC1,y=PC2,color=Haplotype),size=2) +
+  geom_point(aes(x=PC1,y=PC2,color=Haplotype),size=1.5,alpha=0.6) +
   labs(x="PC1 (22.1%)",y="PC2 (8.8%)")
 
 location12 <- ggplot(data) + theme_classic(base_size=12) +
-  geom_point(aes(x=PC1,y=PC2,color=Location..province.),size=2) +
+  geom_point(aes(x=PC1,y=PC2,color=Location..province.),size=1.5,alpha=0.6) +
   labs(x="PC1 (22.1%)",y="PC2 (8.8%)",color="Province")
 
 
