@@ -1,0 +1,1 @@
+These files are used to produce the PCA plots in the Supplemental Data. They use the eigenvectors/values from the plink analysis, `dutch_data_clean_prune.eigenvec`, combined with the `baseclear_metadata.csv` information.
