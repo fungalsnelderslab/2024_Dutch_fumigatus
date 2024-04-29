@@ -1,0 +1,175 @@
+Sample;Source;Haplotype;;ITR;VORI;POS;QoI;MBC;Mating type;Location (province);Heterozygosity
+162;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+513;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;high
+980;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+1267;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+1464;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+1533;Clinical;wt R;;-;+;-;0;0;MAT1-1;North-Holland;
+1545;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+1730;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+1945;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+1976;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+2108;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;high
+2109;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+2288;Clinical;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+2406;Clinical;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+102C11;Environmental;34;L98H/S297T/F495I;+;-;-;0;R;MAT1-1;North-Holland;
+11A2;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+11A5;Environmental;wt R;;+;-;-;0;0;MAT1-2;North-Holland;
+11A6;Environmental;34;L98H;+;+;-;R;R;MAT1-2;North-Holland;
+13B11;Environmental;46;Y121F/T289A/G448S;+;+;-;R;R;MAT1-2;North-Holland;
+13B9;Environmental;34;L98H;+;-;-;R;R;MAT1-2;North-Holland;
+16C32;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+18A1;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-1;North-Holland;
+18A2;Environmental;34;L98H/S297T/F495I;+;+;-;R;R;MAT1-2;North-Holland;
+18A3;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+19B4;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-2;North-Holland;
+25C20;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+26B5;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-2;North-Holland;
+27C10;Environmental;46;Y121F/T289A/I364V/G448S;+;+;+;R;R;MAT1-1;North-Holland;
+27C7;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-2;North-Holland;high
+29C8;Environmental;34;L98H/T289A/G448S;-;+;-;R;R;MAT1-1;North-Holland;
+33MK1;Environmental;34;L98H/T289A;+;+;-;R;R;MAT1-1;North-Holland;
+34BR24;Environmental;wt;;-;-;-;0;0;MAT1-1;Netherlands;
+35CS28;Environmental;34;L98H;+;-;-;0;0;MAT1-2;Drenthe;
+36B7;Environmental;34;L98H;+;-;-;0;R;MAT1-1;North-Holland;
+38C31;Environmental;wt;Y121F/T289A/G448S;-;-;-;R;R;MAT1-2;North-Holland;
+39B10;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+40A20;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+40A21;Environmental;34;L98H;+;-;-;0;R;MAT1-2;North-Holland;
+40A8;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-2;North-Holland;
+46A23;Environmental;34;L98H;+;+;-;R;R;MAT1-1;North-Holland;
+47A8;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+48A4;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+48A5;Environmental;34;L98H;+;-;-;0;0;MAT1-2;North-Holland;
+48A6;Environmental;34;L98H;+;+;-;R;R;MAT1-1;North-Holland;
+4A18;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+4A19;Environmental;34;L98H;+;+;-;0;0;MAT1-1;North-Holland;
+50C32;Environmental;46;Y121F/T289A;+;+;-;0;0/R;MAT1-2;North-Holland;high
+52B4;Environmental;46;Y121F/T289A;-;+;-;R;0;MAT1-1;North-Holland;
+55C1;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+55C3;Environmental;46;Y121F/T289A;-;+;-;R;0;MAT1-2;North-Holland;
+55C4;Environmental;34;L98H;+;+;-;R;R;MAT1-2;North-Holland;
+56C17;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-2;North-Holland;
+56C20;Environmental;46;Y121F/T289A;-;+;-;R;0;MAT1-2;North-Holland;
+58C25;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-2;North-Holland;
+5A16;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+60C3;Environmental;34;L98H/T289A/I364V/G448S;+;+;-;R;R;MAT1-1;North-Holland;
+63C6;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+66A16;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-2;North-Holland;
+66A3;Environmental;34;L98H;+;+;-;R;R;MAT1-2;North-Holland;
+67A2;Environmental;34;L98H;+;+;-;R;R;MAT1-1;North-Holland;
+67A3;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-2;North-Holland;
+68A3;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+69A4;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+69A5;Environmental;34;L98H/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+70B28;Environmental;wt R;;+;+;+;0;0;MAT1-2;North-Holland;
+72A11;Environmental;46;Y121F/T289A;-;+;-;R;R;MAT1-1;North-Holland;
+72A19;Environmental;46;Y121F/T289A/I364V/G448S;+;+;+;R;R;MAT1-2;North-Holland;high
+72A6;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+72A8;Environmental;wt R;;-;+;-;0;0;MAT1-2;North-Holland;high
+74C8;Environmental;46;Y121F/T289A/I364V/G448S;-;+;-;R;R;MAT1-1;North-Holland;
+76A17;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;high
+76A18;Environmental;34;L98H;+;+;-;R;R;MAT1-1;North-Holland;
+77B14;Environmental;46;Y121F/T289A/I364V/G448S;-;+;-;R;R;MAT1-1;North-Holland;
+78C1;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+78C2;Environmental;34;L98H;+;-;-;R;0;MAT1-2;North-Holland;
+79C1;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+80C17;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+81C14;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+81C3;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-1;North-Holland;
+82C21;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+82C23;Environmental;34;L98H;+;+;-;0;0;MAT1-1;North-Holland;
+83C13;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+84C7;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+85C12;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+86C22;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+87C25;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+88C19;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+88C20;Environmental;34;L98H;+;+;+;0;0;MAT1-1;North-Holland;
+8C2;Environmental;wt R;;+;-;-;0;0;MAT1-1;North-Holland;
+93C2;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+94B6;Environmental;46;Y121F/T289A;+;+;-;R;R;MAT1-1;North-Holland;
+95A8;Environmental;wt;;-;-;-;0;0;MAT1-2;North-Holland;
+96C26;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+98C11;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+98C12;Environmental;46;Y121F/T289A/I364V/G448S;-;+;-;R;R;MAT1-2;North-Holland;
+99B16;Environmental;46;Y121F/T289A/G448S;+;+;-;R;R;MAT1-1;North-Holland;
+9C22;Environmental;wt;;-;-;-;0;0;MAT1-1;North-Holland;
+9C23;Environmental;34;L98H;+;+;-;0;0;MAT1-2;North-Holland;
+9C24;Environmental;34;L98H;+;-;-;0;0;MAT1-2;North-Holland;
+V184-14;Environmental;34;L98H;+;+;+;R;0;MAT1-1;South-Holland;
+V184-15;Environmental;46;Y121F/T289A;-;+;+;R;R;MAT1-1;Drenthe;
+V184-16;Environmental;34;L98H;+;+;+;0;0;MAT1-1;North-Holland;
+V184-17;Environmental;34;L98H; +/-; +/-;+;0;0;MAT1-2;North-Holland;
+V184-18;Environmental;34;L98H;+;+; +/-;0;0;MAT1-2;South-Holland;
+V184-19;Environmental;34;L98H/T289A/G448S;-;+;-;0;R;MAT1-1;North-Brabant;
+V192-81;Clinical;34;L98H;+;+;-;0;0;MAT1-1;Gelderland;
+V196-05;Clinical;34;L98H;+;+; +/-;0;0;MAT1-2;Gelderland;
+V197-79;Clinical;wt;; +/-; -; -;0;0;MAT1-1;Gelderland;
+V198-65;Clinical;34;L98H;+; +/-;+;0;0;MAT1-2;Gelderland;
+V199-25;Clinical;34;L98H;-; +/-;-;0;R;MAT1-2;North-Holland;
+V200-50;Clinical;34;L98H;+;+;-;R;0;MAT1-2;North-Holland;
+V200-72;Clinical;34;L98H/S297T;+;-;-;0;R;MAT1-1;Gelderland;
+V204-54;Clinical;46;Y121F/T289A;+;+;+;R;R;MAT1-2;North-Holland;
+V207-11;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V208-52;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V209-50;Clinical;wt R;; +/-;+;-;0;0;MAT1-1;Gelderland;high
+V209-56;Clinical;34;L98H;+;+;+;0;0;MAT1-1;North-Holland;
+V210-08;Clinical;34;L98H;+;+;+;R;0;MAT1-2;North-Holland;
+V212-54;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V213-14;Clinical;46;Y121F/T289A/G448S;-;+; +/-;R;R;MAT1-2;Gelderland;
+V215-11;Clinical;34;L98H;+;-;+;0;0;MAT1-2;Gelderland;high
+V215-17;Clinical;34;L98H; +/-; +/-;+;0;0;MAT1-1;North-Holland;
+V215-18;Clinical;34;L98H;-;-;+;0;0;MAT1-1;North-Holland;
+V215-62;Clinical;34;L98H;+;-;-;0;0;MAT1-2;Gelderland;
+V219-48;Clinical;34;L98H;+;+;-;R;0;MAT1-1;North-Holland;high
+V224-66;Clinical;34;L98H;+; +/-;-;0;0;MAT1-1;Gelderland;high
+V226-02;Clinical;wt R;G54R;+;-;+;0;0;MAT1-2;Gelderland;
+V226-13;Clinical;46;Y121F/T289A;+/-;+;+;0/R;0/R;MAT1-1;Gelderland;high
+V226-28;Clinical;46;Y121F/D262Y/T289A;+;+;+;0;0;MAT1-1;Gelderland;
+V228-47;Clinical;wt;;-;-;-;0;0;MAT1-2;Gelderland;high
+V229-37;Clinical;34;L98H;+;+;+;0;0;MAT1-1;North-Holland;
+V231-63;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V232-75;Clinical;wt;;-;-;-;0;0;MAT1-2;Gelderland;
+V233-22;Clinical;92;Y121F/T289A/G448S;+;+;+;R;R;MAT1-2;North-Holland;
+V233-43;Clinical;34;L98H;+; +/-;+;0;0;MAT1-2;Gelderland;
+V234-13;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V235-57;Clinical;92;Y121F/T289A/G448S;+;+;+;R;R;MAT1-1;South-Holland;
+V237-62;Clinical;34;L98H;+;+/-;+/-;0;0;MAT1-2;South-Holland;high
+V238-07;Clinical;34;L98H;+;+;+;0;0;MAT1-1;North-Holland;
+V240-10;Clinical;wt;;-;-;-;0;0;MAT1-2;Gelderland;
+V250-64;Clinical;wt;;-;-;-;0;0;MAT1-2;Gelderland;
+V251-74;Clinical;34;L98H;+;+; +/-;0;0;MAT1-1;Gelderland;
+V252-43;Clinical;46;Y121F/T289A;+;-;-;R;R;MAT1-1;North-Holland;
+V254-50;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V254-55;Clinical;wt;;-;-;-;0;0;MAT1-1;Gelderland;
+V255-23;Clinical;34;L98H;+;+;-;0;0;MAT1-1;Gelderland;
+V257-33;Clinical;34;L98H;+;+;+;0;0;MAT1-1;Gelderland;
+V258-36;Clinical;46;L98H/Y121F/T289A;+;+;+;R;R;MAT1-1;North-Holland;
+V259-28;Clinical;34;L98H;+;+;+;R;0;MAT1-2;North-Holland;
+V259-78;Clinical;34;L98H;+; +/-;+;R;R;MAT1-2;North-Holland;
+V261-15;Clinical;46;Y121F/T289A;+;+;+;R;R;MAT1-2;North-Holland;
+V261-31;Clinical;34;L98H;+;+; +/-;R;R;MAT1-1;North-Holland;
+V261-45;Clinical;34;L98H;+;+;+;0;0;MAT1-2;Gelderland;
+V265-12;Clinical;34;L98H;+;-;-;0;0;MAT1-1;North-Holland;
+V265-17;Clinical;wt R;;+; +/-;-;0;0;MAT1-1;North-Holland;
+V265-56;Clinical;34;L98H/Y121F;+;+;-;0/R;0/R;MAT1-2;North-Holland;high
+V266-66;Clinical;34;L98H;+;+;-;0;0;MAT1-1;Gelderland;
+V269-73;Clinical;34;L98H;+;+/-;+/-;0;0;MAT1-2;North-Holland;
+V272-18;Clinical;34;L98H;+;+/-;+;0;0;MAT1-2;Groningen;
+V272-32;Clinical;34;L98H;+/-;+/-;+/-;0;0;MAT1-2;Groningen;
+V273-05;Clinical;34;L98H;+;+/-;+/-;.;.;.;Groningen;low coverage
+V273-30;Clinical;wt R;;+;-;+;0;0;MAT1-1;Gelderland;
+V273-52;Clinical;34;L98H;+;+/-;-;0;0;MAT1-2;Groningen;
+V273-53;Clinical;34;L98H;+;+/-;-;0;0;MAT1-2;Groningen;
+V275-41;Clinical;46;Y121F/T289A/I364V/G448S;-;+;-;R;R;MAT1-2;North-Holland;
+V282-59;Clinical;46;Y121F/T289A/I364V/G448S; +/-;+;+;R;R;MAT1-1;Gelderland;
+V284-29;Clinical;wt R;;+;+; +/-;0;0;MAT1-1;North-Holland;
+V285-58;Clinical;46;Y121F/T289A;-;+;-;R;R;MAT1-1;Gelderland;
+V289-01;Clinical;46;Y121F/T289A;-;+; +/-;R;R;MAT1-2;North-Holland;
+V293-59;Clinical;wt R;;-;+;-;0;0;MAT1-2;Gelderland;high
+V294-36;Clinical;46;Y121F/T289A;-;+;+;R;R;MAT1-1;North-Holland;
+V297-39;Clinical;46;Y121F/T289A; +/-;+; +/-;R;R;MAT1-2;North-Holland;
+V306-43;Clinical;46;Y121F/T289A/I364V/G448S;-;+;+;R;R;MAT1-2;North-Holland;
+V306-67;Clinical;46;Y121F/T289A/I364V/G448S;-;+;+;R;R;MAT1-2;North-Holland;
