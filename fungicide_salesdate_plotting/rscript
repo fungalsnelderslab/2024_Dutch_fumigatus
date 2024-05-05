@@ -1,1 +1,24 @@
+library(ggplot2)
+library(dplyr)
+library(tidyr)
 
+salesdata_long<-pivot_longer(Sales_data_Fungicides_1984_2021_FRAC_classes, as.character(seq(1984,2021)), names_to = "year")
+
+ggplot(salesdata_long) +
+  aes(x = year, y = tons_value, fill = Class) +
+  geom_col() +
+  scale_fill_manual(values = c(QoI = "#9C9B9B", 
+                               MBC = "#86E07E",
+                               SDHI = "#E75480",
+                               DMI = "#0684EC")) +
+  theme_minimal() +
+  labs(x = "Year", y = "Sales volume per class (Metric tons)", fill = "FRAC class") +   
+  theme_classic(base_size = 10) +  
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 7),        
+        panel.grid.minor = element_blank(),        
+        panel.grid.major.x = element_blank(),
+        legend.position = c(0.05, 0.95),  # Set legend position inside the plot
+        legend.justification = c(0, 1),  # Align legend to top-left corner
+        legend.box = "horizontal",  # Display legend in horizontal layout
+        legend.margin = margin(0, 0, 0, 0)) +  # Set legend margin to remove spacing
+  scale_y_continuous(expand=c(0,0))
