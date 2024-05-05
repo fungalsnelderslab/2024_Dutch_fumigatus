@@ -2,6 +2,35 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 
+#sales data per MIC tested fungicide
+
+salesdata_long<-pivot_longer(Afzetgegevens_fungiciden_tm_2009_voor_WUR, as.character(seq(1984,2021)), names_to = "year")
+salesdata_long$tons_value <- salesdata_long$value / 1000
+
+ggplot(salesdata_long) +
+  aes(x = year, y = tons_value, fill = name) +
+  geom_col() +
+  scale_fill_manual(values = c(`AZOXYSTROBIN ` = "#9C9B9B", 
+                               BENOMYL = "#0AB159", 
+                               CARBENDAZIM = "#86E07E", 
+                               `DIFENOCONAZOLE ` = "#0684EC", 
+                               `PROTHIOCONAZOLE ` = "#8ED2EF", 
+                               `PYRACLOSTROBIN ` = "#6A6B6C", 
+                               `TEBUCONAZOLE ` = "#1A2D81")) +
+  theme_minimal() +
+  labs(x = "Year", y = "Sales volume per fungicide (Metric tons)", fill = "MIC"[50]~"tested fungicides") +   
+  theme_classic(base_size = 10) +  
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 7),        
+        panel.grid.minor = element_blank(),        
+        panel.grid.major.x = element_blank(),
+        legend.position = c(0.05, 0.95),  # Set legend position inside the plot
+        legend.justification = c(0, 1),  # Align legend to top-left corner
+        legend.box = "horizontal",  # Display legend in horizontal layout
+        legend.margin = margin(0, 0, 0, 0)) +  # Set legend margin to remove spacing
+  scale_y_continuous(expand=c(0,0))
+
+#sales data per FRAC class
+
 salesdata_long<-pivot_longer(Sales_data_Fungicides_1984_2021_FRAC_classes, as.character(seq(1984,2021)), names_to = "year")
 
 ggplot(salesdata_long) +
