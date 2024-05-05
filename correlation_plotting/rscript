@@ -1,1 +1,28 @@
+library(corrplot)
+library(RColorBrewer)
+
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("kassambara/ggcorrplot")
+cor(MIC_results_Nov_2022)
+corrplot(MIC_results_Nov_2022, type="upper")
+
+library(ggcorrplot)
+corr <- round(cor(MIC_results_Nov_2022), 1)
+cor_pmat(MIC_results_Nov_2022)
+ggcorrplot(corr, type = "lower", lab = TRUE)
+
+corr <- round(cor_matrix, 1)
+ggcorrplot(corr, type = "lower", lab = TRUE) +
+  theme(axis.text.x = element_markdown(), # Allow markdown formatting for x-axis labels
+        axis.text.y = element_markdown()) +
+  scale_x_discrete(labels = format_labels) + # Apply custom formatting to labels
+  scale_y_discrete(labels = format_labels)   # Apply custom formatting to y-axis labels
+format_labels <- function(labels) {
+  labels <- gsub("benA ", "<i>ben</i>A ", labels)  # Italicize "ben"
+  labels <- gsub("F219Y", "<sup>F219Y</sup>", labels) # Superscript "F219Y"
+  labels <- gsub("cytB ", "<i>cyt</i>B ", labels)  # Italicize "cyt"
+  labels <- gsub("G143A", "<sup>G143A</sup>", labels) # Superscript "G143A"
+  labels <- gsub("cyp51A TR34/TR46", "<i>cyp</i>51A TR<sub>34</sub>/TR<sub>46</sub>", labels) # Italicize "cyp" and subscript "34" and "46"
+  return(labels)
+}
 
