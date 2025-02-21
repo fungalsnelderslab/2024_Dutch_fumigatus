@@ -1,24 +1,24 @@
 library(ggplot2)
 library(cowplot)
 library(UpSetR)
-library(ggforce)
+library(dplyr)
+library(tidyr)
+library(igraph)
+#library(ggraph)
+#library(tidygraph)
+
+#now read in the global sample variant data----
 global_diversity <- read.table("/Users/ben/Downloads/plink.genome",header=T)
 global_metadata <- read.delim("/Users/ben/Downloads/global_dataset_metadata.csv",sep="\t")
 global_metadata$new_name <- paste0(global_metadata$accession_id,"_",global_metadata$country,"_",global_metadata$clinical_environmental)
 
-#
+# first take alook at the raw data
 ggplot(global_diversity) +
   geom_histogram(aes(x=DST),bins=400) +
   theme_classic() +
   labs(x="Genetic Distance",y="Pairs")
 
-ggplot(global_diversity,aes(x=DST)) +
-  geom_histogram(bins=400) +
-  theme_classic() +
-  labs(x="Genetic Distance",y="Pairs") +
-  facet_zoom(xlim = c(0.995,1.001),ylim=c(0,60))
-
-
+#now make plots
 total <- ggplot(global_diversity) +
   geom_histogram(aes(x=DST),bins=400) + xlim(0.88,1) +
   theme_classic() +
@@ -30,12 +30,105 @@ close <- ggplot(global_diversity) +
   geom_vline(aes(xintercept=0.998),lty=2)+
   labs(x="Genetic Distance",y="")
 
-clones <- plot_grid(total,close,ncol=2)
-clones
-ggsave("/Users/ben/Downloads/clones.jpg",width=6,height=3)
-library(igraph)
-library(ggraph)
-library(tidygraph)
+#read in the four locus analysis----
+t <- read.delim("/Users/ben/Downloads/locus_typing_results.tsv")
+
+#the file contains the read coverage for four control loci and 4 polymorphic genes
+head(t)
+
+# Compute averages for the specified control genes
+target_regions <- c("NC_007196.1:1539720-1544676", "NC_007195.1:4660561-4662944","NC_007198.1:242866-244662","NC_007199.1:3491106-3496228")
+
+avg_values <- t %>%
+  filter(region %in% target_regions) %>%
+  group_by(file) %>%
+  summarise(Average = mean(depth, na.rm = TRUE))
+
+#make the data long format, and then Recalculate third column based on the sample-specific average
+t <- t %>%
+  left_join(avg_values, by = "file") %>%
+  mutate(Value = ifelse(!is.na(Average), Average, depth)) %>%
+  select(-Average)
+
+t$normalized_depth <- t$depth/t$Value
+
+#after recalculating, make the data wide format again, and remove the now redundant control regions
+wide <- pivot_wider(t[,c(1,2,5)],names_from=region,values_from=normalized_depth)
+wide <- wide[,c(1,2,4,6,8)]
+colnames(wide) <- c("Sample","mat","hetA","hetB","hetC")
+
+#plot the histograms of read depth across the dataset
+mat  <- ggplot(wide) + geom_histogram(aes(x=mat),bins=100) +  geom_vline(aes(xintercept=0.5),lty=2) + scale_x_continuous(limits = c(-0.3,1.5)) + theme_classic() + labs(x="Normalized Read Depth",y="Isolates")
+hetA <- ggplot(wide) + geom_histogram(aes(x=hetA),bins=100) + geom_vline(aes(xintercept=0.5),lty=2) + scale_x_continuous(limits = c(-0.3,1.5)) + theme_classic() + labs(x="Normalized Read Depth",y="Isolates")
+hetB <- ggplot(wide) + geom_histogram(aes(x=hetB),bins=100) + geom_vline(aes(xintercept=0.5),lty=2) + scale_x_continuous(limits = c(-0.3,1.5)) + theme_classic() + labs(x="Normalized Read Depth",y="Isolates")
+hetC <- ggplot(wide) + geom_histogram(aes(x=hetC),bins=100) + geom_vline(aes(xintercept=0.5),lty=2) + scale_x_continuous(limits = c(-0.3,1.5)) + theme_classic() + labs(x="Normalized Read Depth",y="Isolates")
+
+plot_grid(total,close,mat,hetA,hetB,hetC,ncol=2,labels=c("A)","B)", "C) mating-type",
+                                             "D) hetA",
+                                             "E) hetB",
+                                             "F) hetC"),
+                                              hjust=-0.5,
+                                              rel_heights=c(1.7,1,1),
+                                              label_fontface = "plain")
+ggsave("/Users/ben/Downloads/Supp_S2.svg",width=8,height=12)
+
+#now convert to binary barcode format
+wide$mat[wide$mat <= 0.4] <- 0 #reference allele with Af293
+wide$mat[wide$mat >  0.4] <- 1 #alternate allele compared to Af293
+
+wide$hetA[wide$hetA <= 0.4] <- 0 #reference allele with Af293
+wide$hetA[wide$hetA >  0.4] <- 1 #alternate allele compared to Af293
+
+wide$hetB[wide$hetB <= 0.4] <- 0 #reference allele with Af293
+wide$hetB[wide$hetB >  0.4] <- 1 #alternate allele compared to Af293
+
+wide$hetC[wide$hetC <= 0.4] <- 0 #reference allele with Af293
+wide$hetC[wide$hetC >  0.4] <- 1 #alternate allele compared to Af293
+
+wide$combined <- paste0(wide$mat,wide$hetA,wide$hetB,wide$hetC)
+
+#not used in the formal analysis, but count alleles
+sum(wide$mat)
+sum(wide$hetA)
+sum(wide$hetB)
+sum(wide$hetC)
+nrow(wide)
+
+# also unused, a summary of distribution of barcodes
+table(wide$combined)
+
+write.csv(wide,"/Users/ben/Downloads/locus_typing_inferred_results.csv",row.names = F)
+
+
+
+
+#we want to merge 4 locus genotypes with clonal data
+clonal_data <- subset(global_diversity,DST>0.998)
+wide$Sample <- gsub("bams/.[0-9A-Za-z]+.","",wide$Sample,perl=T)
+wide$Sample <- sub(".sorted.bam","",wide$Sample)
+
+#this is the analysis for the pairs that are more than 99.8% similar
+pairdata <- clonal_data %>% 
+  left_join(wide, by=c("FID1" = "Sample")) %>%
+  rename(barcode_FID1 = combined) %>%
+  left_join(wide, by = c("FID2" = "Sample")) %>%
+  rename(barcode_FID2 = combined)
+
+sum(pairdata$barcode_FID1 == pairdata$barcode_FID2,na.rm=T)
+sum(pairdata$barcode_FID1 != pairdata$barcode_FID2,na.rm=T)
+
+#now we calculate for all samples
+alldata <- global_diversity %>% 
+  left_join(wide, by=c("FID1" = "Sample")) %>%
+  rename(barcode_FID1 = combined) %>%
+  left_join(wide, by = c("FID2" = "Sample")) %>%
+  rename(barcode_FID2 = combined)
+
+sum(alldata$barcode_FID1 == alldata$barcode_FID2,na.rm=T)
+sum(alldata$barcode_FID1 != alldata$barcode_FID2,na.rm=T)
+
+
+
 clonal_data <- subset(global_diversity,DST>0.998)
 clonal_data <- clonal_data[order(clonal_data$FID1),]
 global_metadata <- read.delim("/Users/ben/Downloads/global_dataset_metadata.tsv",sep="\t")
